@@ -23,4 +23,5 @@ total_times = 0
 for element in locs_1:
     q = element*sum(element == locs_2)
     total_times += q
+    
 print(f"Solution to second part challenge day 1 ---> {total_times}")
