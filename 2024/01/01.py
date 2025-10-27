@@ -15,7 +15,12 @@ with open(input_file, "r", encoding="utf-8") as f:
 
 
 locs_1_, locs_2_ = np.sort(np.array(locs_1)), np.sort(np.array(locs_2))
-print(locs_1_, locs_2_)
+# print(locs_1_, locs_2_)
 print(f"Solution to first part challenge day 1 ---> {np.sum(abs(locs_1_-locs_2_))}")
 
 locs_1, locs_2 = np.array(locs_1), np.array(locs_2)
+total_times = 0
+for element in locs_1:
+    q = element*sum(element == locs_2)
+    total_times += q
+print(f"Solution to second part challenge day 1 ---> {total_times}")
