@@ -14,5 +14,8 @@ with open(input_file, "r", encoding="utf-8") as f:
         locs_2.append(int(locs[1]))
 
 
-locs_1, locs_2 = np.sort(np.array(locs_1)), np.sort(np.array(locs_2))
-print(locs_1, locs_2, abs(np.sum(locs_1-locs_2)))
+locs_1_, locs_2_ = np.sort(np.array(locs_1)), np.sort(np.array(locs_2))
+print(locs_1_, locs_2_)
+print(f"Solution to first part challenge day 1 ---> {np.sum(abs(locs_1_-locs_2_))}")
+
+locs_1, locs_2 = np.array(locs_1), np.array(locs_2)
